@@ -42,6 +42,7 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "typecheck": "node scripts/route-types.cjs && tsc --noEmit",
+    "test": "node --test --import ./tests/register.mjs tests/*.test.mjs",
     "build:web": "expo export --platform web && node scripts/generate-pwa.mjs",
     "preview": "npx wrangler@4 dev --local",
     "deploy": "npx wrangler@4 deploy",
