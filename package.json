@@ -1,7 +1,7 @@
 {
   "name": "timer-games",
   "version": "1.0.0",
-  "main": "expo-router/entry",
+  "main": "src/index.ts",
   "dependencies": {
     "@expo/ui": "~58.0.24",
     "expo": "~58.0.20",

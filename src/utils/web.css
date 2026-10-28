@@ -1,0 +1,61 @@
+:root {
+  color-scheme: dark;
+  background: #080b08;
+}
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  background: #080b08;
+}
+body {
+  overscroll-behavior-y: none;
+}
+button,
+input {
+  font: inherit;
+}
+button,
+[role='button'] {
+  touch-action: manipulation;
+}
+:focus-visible {
+  outline: 3px solid #8dff3f;
+  outline-offset: 5px;
+}
+.timer-control {
+  width: 216px;
+  min-height: 216px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border: 8px solid #33551f;
+  border-radius: 50%;
+  padding: 20px;
+  background: #8dff3f;
+  color: #080b08;
+  font:
+    900 28px/1.2 system-ui,
+    sans-serif;
+  cursor: pointer;
+  box-shadow:
+    0 7px 0 #1e3313,
+    0 0 25px #8dff3f12;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.timer-control:active {
+  box-shadow: 0 3px 0 #1e3313;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
