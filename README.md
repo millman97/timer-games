@@ -1,56 +1,56 @@
-# Welcome to your Expo app 👋
+# Timer Games
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Five timing games for solo play or sharing one phone. Built with Expo, React Native
+and TypeScript, with an installable web app that works offline.
 
-## Get started
+## Games
 
-1. Install dependencies
+| Game                    | Players | How it works                                                |
+| ----------------------- | ------- | ----------------------------------------------------------- |
+| Imposter                | 3–12    | Time by feel, bluff your role, and vote for an imposter.    |
+| Closest to the Target   | 2–12    | Get as close as possible to the target time.                |
+| Closest in X Increments | 2–12    | Reach the target across several timed intervals.            |
+| Stay Under the Time     | 1–12    | Add to a hidden total without going over the limit.         |
+| Time Rush               | 1–12    | Complete five targets in sequence. Lowest total error wins. |
 
-   ```bash
-   npm install
-   ```
+## Development
 
-2. Start the app
+Requires Node.js 24.18 or newer and npm.
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```sh
+npm ci
+npm start
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+Use `npm run web` for browser development.
 
-### Other setup steps
+### Checks
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```sh
+npm run lint
+npm run typecheck
+npm test
+```
 
-## Learn more
+Format code with `npm run format`.
 
-To learn more about developing your project with Expo, look at the following resources:
+## Web deployment
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Build and preview the web app:
 
-## Join the community
+```sh
+npm run build:web
+npm run preview
+```
 
-Join our community of developers creating universal apps.
+Deploy to Cloudflare Workers Static Assets using the name in `wrangler.jsonc`:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```sh
+npx wrangler@4 login
+npm run deploy
+```
+
+On iPhone, open the deployed HTTPS site in Safari and select **Share → Add to
+Home Screen**. Open it online once before playing offline.
+
+[Design notes](docs/design.md) · [MIT licence](LICENSE)
