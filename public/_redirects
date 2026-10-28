@@ -1,0 +1,7 @@
+/ /index.html 200
+/setup /index.html 200
+/roster /index.html 200
+/play /index.html 200
+/setup/ /setup 301
+/roster/ /roster 301
+/play/ /play 301
