@@ -1,10 +1,11 @@
 {
-  "name": "timerimpostergame",
+  "name": "timer-games",
   "version": "1.0.0",
   "main": "expo-router/entry",
   "dependencies": {
     "@expo/ui": "~58.0.24",
     "expo": "~58.0.20",
+    "expo-audio": "~58.0.10",
     "expo-constants": "~58.0.13",
     "expo-device": "~58.0.5",
     "expo-font": "~58.0.10",
@@ -29,15 +30,19 @@
   },
   "devDependencies": {
     "@types/react": "~19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-expo": "~58.0.4",
+    "prettier": "^3.9.10",
     "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",
-    "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "typecheck": "node scripts/route-types.cjs && tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"scripts/*.{js,mjs,cjs}\" \"tests/*.mjs\""
   },
   "private": true
 }
