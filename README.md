@@ -3,6 +3,8 @@
 Five timing games for solo play or sharing one phone. Built with Expo, React Native
 and TypeScript, with an installable web app that works offline.
 
+Deployed at [https://timer-games.millman.workers.dev/](https://timer-games.millman.workers.dev/)
+
 ## Games
 
 | Game                    | Players | How it works                                                |
